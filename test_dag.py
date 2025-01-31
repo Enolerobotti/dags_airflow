@@ -10,5 +10,6 @@ with DAG(
         catchup=False
 ) as dag:
     t0 = PythonOperator(
+        task_id="hello",
         python_callable=lambda : print("hello world")
     )
